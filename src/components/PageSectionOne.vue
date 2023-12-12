@@ -33,8 +33,8 @@ export default {
             </div>
 
             <div class="m-5">
-                <p id="subtitle">12 Year Experience</p>
-                <h1>We Are The Best Gaming Company</h1>
+                <p class="highlight">12 Year Experience</p>
+                <h1 class="title">We Are The Best Gaming Company</h1>
                 <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim autem asperiores facere ab,
                     officia,
                     provident, placeat non quas recusandae alias debitis. Assumenda non quos, tempora optio excepturi
@@ -104,20 +104,8 @@ export default {
     margin-bottom: 6rem;
 }
 
-#subtitle {
-    color: #00AC4D;
-    font-weight: 600;
-    font-size: 18px;
-}
-
 .list {
     font-weight: 600;
-}
-
-h1 {
-    font-size: 50px;
-    font-weight: 700;
-    margin: 1rem 0 2rem 0;
 }
 
 .icon {

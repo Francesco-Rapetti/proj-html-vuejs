@@ -92,7 +92,7 @@ export default {
                 </div>
 
                 <div id="jumbo-text" class="position-relative z-index-1 text-center">
-                    <p class="mb-3">WELCOME TO RAXG</p>
+                    <p class="highlight mb-3">WELCOME TO RAXG</p>
                     <h1 class="mb-5">ARE YOU READY FOR YOUR NEXT PERFORMANCE?</h1>
                     <div class="d-flex justify-content-center">
                         <AppButton text="Read More" :btnArrow="true" :playBtn="true" />
@@ -133,12 +133,6 @@ export default {
 .team-jumbo>img {
     max-width: 117px;
     max-height: 150px;
-}
-
-p {
-    color: #00AC4D;
-    font-size: 18px;
-    font-weight: 600;
 }
 
 .wrapper {
