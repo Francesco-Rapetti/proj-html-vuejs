@@ -13,3 +13,15 @@ p {
 	margin: 0;
 	font-size: 17px;
 }
+
+p.highlight {
+	color: #00AC4D;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+h1.title {
+	font-size: 50px;
+	font-weight: 700;
+	margin: 1rem 0 2rem 0;
+}
