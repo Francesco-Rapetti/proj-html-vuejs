@@ -1,10 +1,12 @@
 <script>
 import AppNavbar from './components/AppNavbar.vue'
 import PageHeader from './components/PageHeader.vue'
+import PageSectionOne from './components/PageSectionOne.vue'
 export default {
 	components: {
 		AppNavbar,
-		PageHeader
+		PageHeader,
+		PageSectionOne,
 	}
 }
 </script>
@@ -13,6 +15,10 @@ export default {
 	<header>
 		<PageHeader />
 	</header>
+
+	<main>
+		<PageSectionOne />
+	</main>
 </template>
 
 <style scoped></style>
