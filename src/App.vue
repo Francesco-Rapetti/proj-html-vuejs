@@ -1,14 +1,18 @@
 <script>
 import AppNavbar from './components/AppNavbar.vue'
+import PageHeader from './components/PageHeader.vue'
 export default {
 	components: {
-		AppNavbar
+		AppNavbar,
+		PageHeader
 	}
 }
 </script>
 
 <template>
-	<AppNavbar />
+	<header>
+		<PageHeader />
+	</header>
 </template>
 
 <style scoped></style>
