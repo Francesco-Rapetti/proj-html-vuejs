@@ -135,7 +135,7 @@ export default {
     cursor: pointer;
     width: 16px;
     height: 16px;
-    color: #202046;
+    color: #333287;
 }
 
 a {
