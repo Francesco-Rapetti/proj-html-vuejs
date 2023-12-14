@@ -2,10 +2,12 @@
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 export default {
     components: {
@@ -13,9 +15,15 @@ export default {
         SwiperSlide
     },
 
+    data() {
+        return {
+            autoplay: true
+        }
+    },
+
     setup() {
         return {
-            modules: [Navigation],
+            modules: [Navigation, Autoplay],
         };
     },
 }
@@ -23,8 +31,10 @@ export default {
 
 <template>
     <div class="carousel position-relative">
-        <Swiper :modules="modules" :slides-per-view="4" :space-between="20" :loop="true"
-            :navigation="{ nextEl: '.btn-next', prevEl: '.btn-prev' }">
+        <Swiper :modules="modules" :slides-per-view="4" :space-between="20" :loop="true" :autoplay="{
+            autoplay: true,
+            pauseOnMouseEnter: true,
+        }" :navigation="{ nextEl: '.btn-next', prevEl: '.btn-prev' }">
             <SwiperSlide>
                 <div class="carousel-card">
                     <span class="new">New</span>
