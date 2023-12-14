@@ -124,5 +124,6 @@ export default {
     height: 900px;
     background-image: url('../assets/img/Vector.png');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>
