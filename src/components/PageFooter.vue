@@ -1,8 +1,9 @@
 <script></script>
 
 <template>
-    <div class="wrapper">
-        <div class="container">
+    <div class="wrapper position-relative">
+        <div class="filter"></div>
+        <div class="container top">
             <div class="row">
                 <div class="col-6">
                     <h1 id="news-letter-text">Our news Letter</h1>
@@ -27,12 +28,34 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+
+        </div>
     </div>
 </template>
 
 <style scoped>
+.container {
+    z-index: 1;
+    position: relative;
+}
+
+.filter {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #19193578;
+}
+
+.wrapper {
+    width: 100%;
+    height: 374px;
+    background-image: url(../assets/img/footer-bg.png);
+}
+
 button {
-    background-color: #05cc7C;
+    background-color: #00AC4D;
     color: black;
     border: 0;
     border-radius: 24px;
@@ -63,7 +86,7 @@ input:focus {
 .icon {
     width: 16px;
     height: 16px;
-    color: #05cc7C;
+    color: #00AC4D;
 }
 
 #news-letter-text {
@@ -72,9 +95,10 @@ input:focus {
     font-weight: 700;
 }
 
-.container {
+.container.top {
     padding: 60px 40px;
     background-color: #202046;
     border-radius: 8px;
+    top: -100px;
 }
 </style>
