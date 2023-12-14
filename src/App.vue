@@ -4,6 +4,7 @@ import PageHeader from './components/PageHeader.vue'
 import PageSectionOne from './components/PageSectionOne.vue'
 import PageSectionTwo from './components/PageSectionTwo.vue'
 import PageSectionThree from './components/PageSectionThree.vue'
+import PageSectionFive from './components/PageSectionFive.vue'
 export default {
 	components: {
 		AppNavbar,
@@ -11,6 +12,7 @@ export default {
 		PageSectionOne,
 		PageSectionTwo,
 		PageSectionThree,
+		PageSectionFive
 	}
 }
 </script>
@@ -24,6 +26,7 @@ export default {
 		<PageSectionOne />
 		<PageSectionTwo />
 		<PageSectionThree />
+		<PageSectionFive />
 	</main>
 </template>
 
