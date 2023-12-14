@@ -44,7 +44,7 @@ export default {
 <template>
     <div id="jumbo">
         <div id="filter"></div>
-        <AppNavbar />
+        <AppNavbar :isFixed="false" />
 
         <div class="wrapper d-flex justify-content-center align-items-center">
 

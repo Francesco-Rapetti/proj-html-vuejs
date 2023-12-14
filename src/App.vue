@@ -24,6 +24,7 @@ export default {
 <template>
 	<header>
 		<PageHeader />
+		<AppNavbar :isFixed="true" />
 	</header>
 
 	<main>

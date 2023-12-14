@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'AppNavbar',
+    props: {
+        isFixed: Boolean
+    },
     data() {
         return {
             collapsed: false
@@ -10,13 +13,38 @@ export default {
     methods: {
         collapse() {
             this.collapsed = !this.collapsed
+        },
+
+        showNavbar() {
+            const navbar = document.querySelector('.navbar.hidden')
+            navbar.style.top = '0'
+            navbar.style.opacity = '1'
+        },
+
+        hideNavbar() {
+            const navbar = document.querySelector('.navbar.hidden')
+            navbar.style.top = '-100px'
+            navbar.style.opacity = '0'
+        }
+    },
+
+    mounted() {
+        if (this.isFixed) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    this.showNavbar()
+                } else {
+                    this.hideNavbar()
+                }
+            })
         }
     }
 }
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg bg-light bg-transparent">
+    <nav class="navbar navbar-expand-lg bg-light bg-transparent" :class="{ 'position-fixed': isFixed, 'hidden': isFixed }"
+        :style="{ backgroundColor: isFixed ? 'rgba(0, 0, 0, 0.4) !important' : 'transparent' }">
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand" href="#">
                 <div id="logo-container">
@@ -111,6 +139,14 @@ export default {
 </template>
 
 <style scoped>
+nav {
+    width: 100%;
+    z-index: 99999;
+    transition: all 0.3s ease;
+    /* opacity: 0; */
+    /* top: -100px; */
+}
+
 #chart-counter {
     position: absolute;
     background-color: #4350FF;
