@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div class="d-flex">
-        <button class="button d-flex align-items-center justify-content-center me-3">
+        <button class="button d-flex align-items-center justify-content-center" :class="{ 'me-3': playBtn }">
             <span class="me-2">{{ text }}</span>
             <svg v-if="btnArrow" class="svg-inline--fa fa-right-long" aria-hidden="true" focusable="false" data-prefix="fas"
                 data-icon="right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
